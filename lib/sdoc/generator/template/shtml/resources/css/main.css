@@ -96,13 +96,6 @@ h1 a:hover, h2 a:hover, .sectiontitle a:hover, .banner a:hover {
 
 .dyn-source {
   display: none;
-  background-color: #232323;
-  color: #E6E0DB;
-  border: 1px solid black;
-  font-family: 'Courier New', 'Terminal', monospace;
-  font-size: 12px;
-  margin: 0.5em 2em 0.5em 0;
-  padding: 0.5em;
 }
 
 .method {
@@ -182,17 +175,16 @@ dd {
   margin-bottom: 0.7em;
 }
 
-.CodeRay {
+.CodeRay, .dyn-source {
   background-color: #232323;
   border: 1px solid black;
   font-family: 'Courier New', 'Terminal', monospace;
   color: #E6E0DB;
   padding: 3px 5px;
   overflow: auto;
-  font-size: 12px;
   margin: 12px 0;
 }
-.CodeRay pre {
+.CodeRay pre, .dyn-source pre {
   background-color: #232323;
   border: none;
   margin: 0px;
