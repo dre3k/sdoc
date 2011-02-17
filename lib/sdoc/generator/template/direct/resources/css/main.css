@@ -213,21 +213,13 @@ tt {
 
 .dyn-source {
   display: none;
-  background: #fffde8;
-  color: #000;
-  border: #ffe0bb dotted 1px;
+  background-color: #232323;
+  color: #E6E0DB;
+  border: 1px solid black;
+  font-family: 'Courier New', 'Terminal', monospace;
+  font-size: 12px;
   margin: 0.5em 2em 0.5em 0;
   padding: 0.5em;
-}
-
-.dyn-source .cmt {
-  color: #00F;
-  font-style: italic;
-}
-
-.dyn-source .kw {
-  color: #070;
-  font-weight: bold;
 }
 
 .description pre {
@@ -294,21 +286,30 @@ tt {
   padding: 0px;
 }
 
-.CodeRay .an { color:#E7BE69 }                      /* html attribute */
-.CodeRay .c  { color:#BC9358; font-style: italic; } /* comment */
-.CodeRay .ch { color:#509E4F }                      /* escaped character */
-.CodeRay .cl { color:#FFF }                         /* class */
-.CodeRay .co { color:#FFF }                         /* constant */
-.CodeRay .fl { color:#A4C260 }                      /* float */
-.CodeRay .fu { color:#FFC56D }                      /* function */
-.CodeRay .gv { color:#D0CFFE }                      /* global variable */
-.CodeRay .i  { color:#A4C260 }                      /* integer */
-.CodeRay .il { background:#151515 }                 /* inline code */
-.CodeRay .iv { color:#D0CFFE }                      /* instance variable */
-.CodeRay .pp { color:#E7BE69 }                      /* doctype */
-.CodeRay .r  { color:#CB7832 }                      /* keyword */
-.CodeRay .rx { color:#A4C260 }                      /* regex */
-.CodeRay .s  { color:#A4C260 }                      /* string */
-.CodeRay .sy { color:#6C9CBD }                      /* symbol */
-.CodeRay .ta { color:#E7BE69 }                      /* html tag */
-.CodeRay .pc { color:#6C9CBD }                      /* boolean */
+.CodeRay .an                   { color:#E7BE69 }                      /* html attribute */
+.CodeRay .c,
+  .ruby-comment                { color:#BC9358; font-style: italic; } /* comment */
+.CodeRay .ch                   { color:#509E4F }                      /* escaped character */
+.CodeRay .cl                   { color:#FFF }                         /* class */
+.CodeRay .co,
+  .ruby-identifier,
+  .ruby-ivar,
+  .ruby-operator,
+  .ruby-constant               { color:#FFF }                         /* constant */
+.CodeRay .fl                   { color:#A4C260 }                      /* float */
+.CodeRay .fu                   { color:#FFC56D }                      /* function */
+.CodeRay .gv                   { color:#D0CFFE }                      /* global variable */
+.CodeRay .i                    { color:#A4C260 }                      /* integer */
+.CodeRay .il                   { }                                    /* inline code */
+.CodeRay .iv                   { color:#D0CFFE }                      /* instance variable */
+.CodeRay .pp                   { color:#E7BE69 }                      /* doctype */
+.CodeRay .r,
+  .ruby-keyword                { color:#CB7832 }                      /* keyword */
+.CodeRay .rx                   { color:#A4C260 }                      /* regex */
+.CodeRay .s,
+  .ruby-regexp,
+  .ruby-node,
+  .ruby-value                  { color:#A4C260 }                      /* string */
+.CodeRay .sy                   { color:#6C9CBD }                      /* symbol */
+.CodeRay .ta                   { color:#E7BE69 }                      /* html tag */
+.CodeRay .pc                   { color:#6C9CBD }                      /* boolean */
