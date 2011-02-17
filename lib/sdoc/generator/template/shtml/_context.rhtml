@@ -116,7 +116,8 @@
             <div class="method">
                 <div class="title">
                     <% if method.call_seq %>
-                    <a name="<%= method.aref %>"></a><b><%= method.call_seq.gsub(/->/, '&rarr;') %></b>
+                    <% obj_name = method.call_seq[/.+?\./] %>
+                    <a name="<%= method.aref %>"></a><b><%= method.call_seq.gsub(/->/, '&rarr;').gsub(obj_name, '<br/>' + obj_name)[5..-1] %></b>
                     <% else %>
                     <a name="<%= method.aref %>"></a><b><%= h method.name %></b><%= h method.params %>
                     <% end %>
