@@ -129,14 +129,9 @@
                 <div class="description">
                   <%# TODO delete this dirty hack when documentation for example for JavaScriptHelper will not be cutted off by <script> tag %>
                   <% description.gsub!('<script>'){ |m| h(m) } %>
-                  <% code = description[/(<pre>)(.+?)(<\/pre>)/m] %>
-                  <% if code %>
-                    <% code = code[5..-8].gsub('&quot;', '"').gsub('&lt;', '<').gsub('&gt;', '>') %>
-                    <% code = CodeRay.scan(code, :ruby).div(:css => :class) %>
-                    <%= description.gsub(/(<pre>)(.+?)(<\/pre>)/m, code) %>
-                  <% else %>
-                    <%= description %>
-                  <% end %>
+                  <%= description.gsub(/(<pre>)(.+?)(<\/pre>)/m){
+                    code = $2.gsub('&quot;', '"').gsub('&lt;', '<').gsub('&gt;', '>');
+                    code = CodeRay.scan(code, :ruby).div(:css => :class)} %>
                 </div>
                 <% end %>
                 <% unless method.aliases.empty? %>
