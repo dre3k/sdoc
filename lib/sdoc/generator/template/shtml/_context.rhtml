@@ -116,8 +116,11 @@
             <div class="method">
                 <div class="title">
                     <% if method.call_seq %>
-                    <% obj_name = method.call_seq[/.+?\./] %>
-                    <a name="<%= method.aref %>"></a><b><%= method.call_seq.gsub(/->/, '&rarr;').gsub(obj_name, '<br/>' + obj_name)[5..-1] %></b>
+                      <% content = [] %>
+                      <% method.call_seq.strip.split("\n").each do |call_seq| %>
+                        <% content << call_seq.gsub(/->/, '&rarr;') %>
+                      <% end %>
+                      <a name="<%= method.aref %>"></a><b><%= content.join('<br/>') %></b>
                     <% else %>
                     <a name="<%= method.aref %>"></a><b><%= h method.name %></b><%= h method.params %>
                     <% end %>
