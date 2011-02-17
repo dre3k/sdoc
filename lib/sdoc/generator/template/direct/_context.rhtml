@@ -133,7 +133,14 @@
                 </div>
                 <% unless (description = method.description).empty? %>
                 <div class="description">
-                  <%= description %>
+                  <% code = description[/(<pre>)(.+?)(<\/pre>)/m] %>
+                  <% if code %>
+                    <% code = code[5..-8].gsub('&quot;', '"').gsub('&lt;', '<').gsub('&gt;', '>') %>
+                    <% code = CodeRay.scan(code, :ruby).div(:css => :class) %>
+                    <%= description.gsub(/(<pre>)(.+?)(<\/pre>)/m, code) %>
+                  <% else %>
+                    <%= description %>
+                  <% end %>
                 </div>
                 <% end %>
                 <% unless method.aliases.empty? %>
