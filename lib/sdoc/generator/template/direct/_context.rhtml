@@ -136,10 +136,7 @@
                 </div>
                 <% unless (description = method.description).empty? %>
                 <div class="description">
-                  <% code = description[/(<pre>)(.+?)(<\/pre>)/m] %>
-                  <%= description.gsub(/(<pre>)(.+?)(<\/pre>)/m){
-                    code = $2.gsub('&quot;', '"').gsub('&lt;', '<').gsub('&gt;', '>');
-                    code = CodeRay.scan(code, :ruby).div(:css => :class)} %>
+                  <%= highlight(description) %>
                 </div>
                 <% end %>
                 <% unless method.aliases.empty? %>

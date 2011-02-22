@@ -12,6 +12,14 @@ require 'rdoc/generator/markup'
 require 'sdoc/github'
 require 'sdoc/templatable'
 require 'sdoc/helpers'
+require 'coderay'
+
+def highlight(content)
+  content.gsub(/(<pre>)(.+?)(<\/pre>)/m) do
+    c = $2.gsub('&quot;', '"').gsub('&lt;', '<').gsub('&gt;', '>');
+    CodeRay.scan(c, :ruby).div(:css => :class)
+  end
+end
 
 class RDoc::ClassModule
   def document_self_or_methods
