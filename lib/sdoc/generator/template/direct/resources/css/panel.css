@@ -6,7 +6,7 @@
         height: 100%;
         top: 0;
         left: 0;
-        background: #FFF;
+        background-color: #2F2F2F;
         z-index: 2;
         font-family: "Helvetica Neue", "Arial", sans-serif;
         //zoom: 1;
@@ -23,10 +23,8 @@
         {
             width: 100%;
             height: 29px;
-            border-bottom: 1px solid #666;
             position: relative;
             left: 0; top: 0;
-            background: #e8e8e8;
         }
 
         .panel .header div
@@ -51,7 +49,7 @@
             font-size: 12px;
             line-height: 29px;
             margin-left: 3px;
-            color: #999;
+            color: #C6C6C6;
             cursor: text;
         }
 
@@ -65,6 +63,9 @@
             -webkit-appearance: searchfield;
             height: 22px;
             //height: auto;
+            background-color: #232323;
+            color: #C6C6C6;
+            border: 0;
         }
         
     /* Header with search box (end) */
@@ -82,7 +83,7 @@
             overflow-y: scroll;
             overflow-x: hidden;
             -overflow-y: hidden;
-            background: #EDF3FE url(../i/results_bg.png);
+            background-color: #2F2F2F;
             z-index: 2;
             //zoom:1;
         }
@@ -91,7 +92,7 @@
         {
             font-size: 0.8em;
             width: 100%;
-            background: #EDF3FE url(../i/results_bg.png);
+            background-color: #2F2F2F;
             //zoom:1;
         }
 
@@ -105,13 +106,14 @@
             overflow: hidden;
             padding: 4px 10px 0 10px;
             cursor: pointer;
+            boder-bottom: 1px dotted white;
         }
 
         .panel .result ul li h1
         {
             font-size: 13px;
             font-weight: normal;
-            color: #333;
+            color: #84BCDE;
             margin-bottom: 2px;
             white-space: nowrap;
         }
@@ -119,7 +121,7 @@
         .panel .result ul li p
         {
             font-size: 11px;
-            color: #333;
+            color: #DADBB1;
             margin-bottom: 2px;
             white-space: nowrap;
         }
@@ -127,46 +129,55 @@
         .panel .result ul li h1 i,
         .panel .result ul li p.snippet
         {
-            color: #999;
+            color: #6C6C6C;
         }
 
         .panel .result ul li b
         {
-            color: #000;
+            color: #84BCDE;
         }
 
         .panel .result ul li.current
         {
-            background: #3875D7;
+            background: #232323;
         }
 
         .panel .result ul li.current h1,
         .panel .result ul li.current p
         {
-            color: #DDD;
+            color: #DADBB1;
         }
 
-        .panel .result ul li.current h1 i,
+        .panel .result ul li.current h1
+        {
+            color: #84BCDE;
+        }
+
+        .panel .result ul li.current h1 i
+        {
+            color: #84BCDE;
+        }
+
         .panel .result ul li.current p.snippet
         {
-            color: #AAA;
+            color: #6C6C6C;
         }
 
         .panel .result ul li.current b
         {
-            color: #FFF;
+            color: #84BCDE;
         }
 
 
         .panel .result ul li:hover,
         .panel .result ul li.selected
         {
-            background: #d0d0d0;
+            background: #232323;
         }
 
         .panel .result ul li.current:hover
         {
-            background: #2965C0;
+            background: #232323;
         }      
         
         .panel .result ul li .badge
@@ -174,7 +185,7 @@
             margin-right: 0.4em;
             margin-left: -0.2em;
             padding: 0 0.2em;
-            color: #000;
+            color: #C6C6C6;
         }
         
         .panel .result ul li .badge_1
@@ -252,15 +263,15 @@
             overflow-y: scroll;
             overflow-x: hidden;
             -overflow-y: hidden;
-            background: #EDF3FE url(../i/tree_bg.png);
+            background-color: #2F2F2F;
             z-index: 30;
         }
-        
+
         .panel .tree ul
         {
-            background: #EDF3FE url(../i/tree_bg.png);
-        }          
-        
+            background-color: #2F2F2F;
+        }
+
         .panel .tree li
         {
             cursor: pointer;
@@ -302,7 +313,7 @@
         {
             font-size: 13px;
             font-weight: normal;
-            color: #000;
+            color: #84BCDE;
             margin-bottom: 2px;
             white-space: nowrap;
         }
@@ -335,7 +346,7 @@
         
         .panel .tree ul li.current
         {
-            background: #3875D7;
+            background: #232323;
         }
         
         .panel .tree ul li.current .icon
@@ -350,7 +361,7 @@
 
         .panel .tree ul li.current h1
         {
-            color: #FFF;
+            color: #84BCDE;
         }
 
         .panel .tree ul li.current p
@@ -366,12 +377,12 @@
         
         .panel .tree ul li:hover
         {
-            background: #d0d0d0;
+            background: #232323;
         }
 
         .panel .tree ul li.current:hover
         {
-            background: #2965C0;
+            background: #232323;
         }
         
         .panel .tree .stopper
