@@ -1,7 +1,7 @@
 <div id="content">
     <% unless (desc = context.description).empty? %>
     <div class="description">
-        <%= desc %>
+        <%= highlight(desc) %>
     </div>
     <% end %>
 
