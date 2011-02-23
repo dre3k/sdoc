@@ -189,27 +189,27 @@
             margin-right: 0.4em;
             margin-left: -0.2em;
             padding: 0 0.2em;
-            color: #C6C6C6;
+            color: #232323;
         }
         
         .panel .result ul li .badge_1
         {
-            background: #ACDBF4;
+            background: #637151;
         }
         
         .panel .result ul li.current .badge_1
         {
-            background: #97BFD7;
+            background: #637151;
         }
         
         .panel .result ul li .badge_2
         {
-            background: #ACF3C3;
+            background: #82775b;
         }
         
         .panel .result ul li.current .badge_2
         {
-            background: #98D7AC;
+            background: #82775b;
         }
         
         .panel .result ul li .badge_3
