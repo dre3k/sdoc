@@ -126,7 +126,11 @@
             white-space: nowrap;
         }
 
-        .panel .result ul li h1 i,
+        .panel .result ul li h1 i
+        {
+            color: #A0A0A0;
+        }
+
         .panel .result ul li p.snippet
         {
             color: #6C6C6C;
@@ -155,7 +159,7 @@
 
         .panel .result ul li.current h1 i
         {
-            color: #84BCDE;
+            color: #A0A0A0;
         }
 
         .panel .result ul li.current p.snippet
