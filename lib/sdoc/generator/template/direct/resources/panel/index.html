@@ -22,6 +22,7 @@
 
  	       $('#search').focus(function() {
  	           $('#search-label').hide();
+ 	           this.select();
             });
  	       $('#search').blur(function() {
  	           this.value == '' && $('#search-label').show()
