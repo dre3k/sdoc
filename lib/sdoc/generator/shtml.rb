@@ -16,7 +16,7 @@ require 'coderay'
 
 def highlight(content)
   content.gsub(/(<pre>)(.+?)(<\/pre>)/m) do
-    c = $2.gsub('&quot;', '"').gsub('&lt;', '<').gsub('&gt;', '>');
+    c = $2.gsub('&quot;', '"').gsub('&lt;', '<').gsub('&gt;', '>').gsub('&amp;', '&');
     CodeRay.scan(c, :ruby).div(:css => :class)
   end
 end
